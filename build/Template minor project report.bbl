@@ -1,0 +1,50 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{NormanS.Nise2012}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6c74748370dfd756c1a31def3359cbe7}{%
+           family={{Norman S. Nise}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{6c74748370dfd756c1a31def3359cbe7}
+      \strng{fullhash}{6c74748370dfd756c1a31def3359cbe7}
+      \strng{bibnamehash}{6c74748370dfd756c1a31def3359cbe7}
+      \strng{authorbibnamehash}{6c74748370dfd756c1a31def3359cbe7}
+      \strng{authornamehash}{6c74748370dfd756c1a31def3359cbe7}
+      \strng{authorfullhash}{6c74748370dfd756c1a31def3359cbe7}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book introduces students to the theory and practice of control systems engineer- ing. The text emphasizes the practical application of the subject to the analysis and design of feedback systems. The study of control systems engineering is essential for students pursuing degrees in electrical, mechanical, aerospace, biomedical, or chemical engineering. Control systems are found in a broad range of applications within these disciplines, from aircraft and spacecraft to robots and process control systems. Control Systems Engineering is suitable for upper-division college and univer- sity engineering students and for those who wish to master the subject matter through self-study. The student using this text should have completed typical lower- division courses in physics and mathematics through differential equations. Other required background material, including Laplace transforms and linear algebra, is incorporated in the text, either within chapter discussions or separately in the appendixes or on the book's Companion Web site. This review material can be omitted without loss of continuity if the student does not require it.}
+      \field{edition}{6}
+      \field{isbn}{9780470547564}
+      \field{title}{{CONTROL SYSTEMS ENGINEERING}}
+      \field{year}{2012}
+      \verb{file}
+      \verb :home/dylan/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Norman S. Nise - 2012 - CONTROL SYSTEMS ENGINEERING.pdf:pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

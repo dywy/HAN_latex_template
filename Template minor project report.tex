@@ -1,0 +1,176 @@
+%% HAN Latex Project Report
+%% Preamble starts here
+\documentclass[11pt,a4paper,twoside]{article}
+\usepackage[utf8]{inputenc}
+
+%% Here's where the title and author are defined.
+\usepackage{authoraftertitle}
+\title{Template to create a minor project report}
+\author{My Name}
+\date{\today}
+%\institution{HAN University of Applied Sciences}
+
+
+%% Setting up document style
+\usepackage{enumitem}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\setlength{\parindent}{0mm}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhf[FC]{\thepage}
+\fancyhf[FLO,FRE]{\MyTitle}
+
+
+%% Stuff for external references.
+\usepackage[backend=biber,natbib=true]{biblatex} 
+\addbibresource{../references.bib}
+\usepackage{csquotes}
+
+
+%% For placing code, equations and units
+\usepackage{listings}
+\usepackage[framed]{matlab-prettifier}
+\usepackage{sistyle}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsfonts,amssymb}
+\usepackage{hyperref}
+
+
+%% For Images, graphics et al
+\usepackage{import}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{transparent}
+\usepackage{rotating}
+
+%% Temp stuff
+\usepackage{blindtext}
+\usepackage[absolute]{textpos}
+
+%% End of preamble. Document begins here.
+\begin{document}
+
+%% Create a title page with the logo, the necesary info and no headers or footers
+\begin{titlepage}
+\thispagestyle{empty}
+
+\begin{picture}(0,0)
+\put(250,-60){\hbox{\includegraphics[scale=2.5]{images/HAN_logo.png}}}
+\end{picture}
+
+
+\begin{textblock}{8}(6 ,4)
+\Large
+\hspace*{\fill} \textbf{HAN Master Project}
+\vspace{0.5cm}
+\begin{flushright}
+\Huge
+\textbf{\MyTitle}
+\end{flushright}
+\end{textblock}
+
+\begin{textblock}{8}(6 ,12)
+\begin{flushright}
+\Large
+\textbf{Arnhem, \today \\ \MyAuthor}
+\end{flushright}
+\end{textblock}
+
+\end{titlepage}
+
+
+
+%% Set pagenumbering to roman
+\pagenumbering{roman}
+
+%% Page with preface
+\section*{Preface}
+Your Preface text here.
+
+
+%% Page with summary
+\newpage
+\section*{Summary}
+Your summary here.
+
+
+%% Page with table of contents
+\newpage
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+
+\section{Introduction}
+Awesome introduction.
+
+
+\section{First Section}
+
+
+\subsection{Equations}
+Here's an example of an equation
+\begin{equation}\label{EQ}
+\ddot{x}=
+-\frac{c}{m}\dot{x}^2
+-\frac{b}{m}\dot{x}
+-\frac{F_b}{m}
++\frac{F_a}{m}
+\end{equation}
+
+It can be referred to like such: \ref{EQ},
+
+\subsection{Code listing}
+Here's how to include a matlab .m file. See listing \ref{matlabfile}.
+
+\lstinputlisting[label=matlabfile,
+				style=Matlab-editor,
+				caption=MATLABFILE.m]
+				{../code/MATLABFILE.m}
+				
+
+Here's how to format text into matlab format in-line:
+\begin{lstlisting}[language=matlab]
+% MATLABFILE.m
+n = input('Enter a number:');
+for sentence = 1:n		% have an indexing go from 1 to n
+    fprintf('%d. Hello world!\n', sentence) % print the index, and a newline \n end
+\end{lstlisting}
+
+
+\subsection{Tables}
+Here's a table:
+
+\begin{table}[h]
+  \centering
+    \begin{tabular}{| l l l |}
+    \hline
+    Column 1 & Column 2 & Column 3 \\
+    \hline
+    4 & 5 & 6 \\
+    7 & 8 & 9 \\
+    \hline
+    \end{tabular}
+  \caption{A simple table}
+\end{table}
+
+Consider checking out \url{https://www.tablesgenerator.com/}.
+
+\subsection{Referencing}
+Make a reference to \citep{NormanS.Nise2012}.
+
+\section{Conclusion}
+Conclusion
+
+\newpage
+\section*{References}
+\printbibliography[title={\null}]
+
+\newpage
+\section*{Appendix A Nomenclature}
+
+\end{document}
