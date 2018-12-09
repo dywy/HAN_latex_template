@@ -13,8 +13,11 @@
 
 %% Setting up document style
 \usepackage{enumitem}
+\setlist[itemize]{topsep=-0.5em}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[absolute]{textpos}
 \setlength{\parindent}{0mm}
+\setlength{\parskip}{1em}
 \usepackage{fancyhdr}
 \setlength{\headheight}{15.2pt}
 \pagestyle{fancy}
@@ -46,10 +49,7 @@
 \usetikzlibrary{calc}
 \usepackage{transparent}
 \usepackage{rotating}
-
-%% Temp stuff
-\usepackage{blindtext}
-\usepackage[absolute]{textpos}
+\usepackage{subfig}
 
 %% End of preamble. Document begins here.
 \begin{document}
