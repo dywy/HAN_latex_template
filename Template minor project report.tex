@@ -51,6 +51,7 @@
 \usepackage{rotating}
 \usepackage{subfig}
 \usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage[labelfont=bf]{caption}
 \widowpenalty=10000
 \clubpenalty=10000
@@ -149,17 +150,16 @@ for sentence = 1:n		% have an indexing go from 1 to n
 \subsection{Tables}
 Here's a table:
 
-\begin{table}[h]
-  \centering
-    \begin{tabular}{| l l l |}
-    \hline
-    Column 1 & Column 2 & Column 3 \\
-    \hline
-    4 & 5 & 6 \\
-    7 & 8 & 9 \\
-    \hline
-    \end{tabular}
-  \caption{A simple table}
+\begin{table}[] \centering
+\caption{Parameters to monitor}
+\label{table:Parameters to monitor}
+\begin{tabularx}{\linewidth}{lllX}
+\toprule
+Parameter 								& Unit					& Limits	& Description 											\\ \midrule
+\texttt{CatalystBrick-1:ttavl0}			& \si{\deg}				& 450		& Required cat light-off temperature					\\
+\texttt{Engine:bsfc\_sys}				& \si{\gram\per{\kWh}}	& 			& Break Specific Fuel consumption						\\
+\texttt{Comb\_chamber\_wall\_temps}		& \si{\deg}				& 120		& Decent maximum to avoid burning the oil on the lining	\\ \bottomrule
+\end{tabularx}
 \end{table}
 
 Consider checking out \url{https://www.tablesgenerator.com/}.
