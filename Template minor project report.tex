@@ -30,12 +30,14 @@
 \usepackage[backend=biber,natbib=true]{biblatex} 
 \addbibresource{../references.bib}
 \usepackage{csquotes}
+\usepackage[page,titletoc, title,header]{appendix}
 
 
 %% For placing code, equations and units
 \usepackage{listings}
 \usepackage[framed]{matlab-prettifier}
 \usepackage{siunitx}
+\AtBeginDocument{\DeclareSIUnit{\kWh}{kWh}}
 \usepackage{mathrsfs}
 \usepackage{amsmath, amsfonts,amssymb}
 \usepackage{hyperref}
@@ -49,9 +51,13 @@
 \usetikzlibrary{calc}
 \usepackage{transparent}
 \usepackage{rotating}
+\usepackage{blindtext}
+\usepackage[absolute]{textpos}
+%\usepackage{draftwatermark}
 \usepackage{subfig}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{longtable}
 \usepackage[labelfont=bf]{caption}
 \widowpenalty=10000
 \clubpenalty=10000
@@ -59,6 +65,7 @@
 \makeindex
 \usepackage[intoc]{nomencl}
 \makenomenclature
+%\usepackage[]{media9} %for future use to embed U3D files
 
 %% End of preamble. Document begins here.
 \begin{document}
