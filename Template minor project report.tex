@@ -66,6 +66,14 @@
 \makeindex
 \usepackage[intoc]{nomencl}
 \makenomenclature
+\usepackage{etoolbox}
+\renewcommand\nomgroup[1]{%
+  \item[\bfseries
+  \ifstrequal{#1}{D}{Definitions}{%
+  \ifstrequal{#1}{A}{Abbreviations}{%
+  \ifstrequal{#1}{S}{Symbols}{}}}%
+  ]
+}
 %\usepackage[]{media9} %for future use to embed U3D files
 
 %% End of preamble. Document begins here.
@@ -178,9 +186,13 @@ Consider checking out \url{https://www.tablesgenerator.com/}.
 
 \subsection{Nomencleture}
 To create a nomencleture for example for the an abbreviation like EGT, add code like so:\\
-\verb=\nomenclature{EGT}{Exhaust Gas Temperature}= \\
+\verb=\nomenclature[A]{EGT}{Exhaust Gas Temperature}= \\
 Best practice would be to do this close to where abbreviation (or whatever) is first use in the text.
-\nomenclature{EGT}{Exhaust Gas Temperature}
+In the preamble, some codes has been added to allow a distinction to be made between Definition (D), Abbreviation (A) or Symbol (S).
+
+\nomenclature[A]{EGT}{Exhaust Gas Temperature}
+\nomenclature[S]{$\pi$}{A mathematical constant}
+\nomenclature[D]{Exhaust Gas}{Emitted as a result of the combustion of fuels}
 
 \subsection{Referencing}
 Make a reference to \citep{NormanS.Nise2012}.
@@ -190,6 +202,8 @@ Conclusion
 
 \newpage
 \printbibliography[heading=bibintoc]
+
+\newpage
 \printnomenclature
 
 \end{document}
