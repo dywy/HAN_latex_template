@@ -8,3 +8,6 @@ I like to use a seperate build directory, so thats why that exists. You may need
 The `code` and `images` folders hold contents refered to by the `.tex` file.
 The `references.bib` file is where I like to put, well, references.
 
+## Texmaker notes
+Assuming _use a "build" subdirectory for ouput files_ is set, use the following command for Makeindex: 'makeindex build/%.nlo -s nomencl.ist -o build/%.nls'
+
